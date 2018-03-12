@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Custom MessageVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Message" id="BYZ-38-t0r" customClass="MyCustomMessageVC" customModule="SignUpPrototype" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eA-Eh-JTp">
+                                <rect key="frame" x="30" y="228" width="315" height="210"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncQ-ME-BWb">
+                                        <rect key="frame" x="16" y="16" width="283" height="122"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-cB-0GM">
+                                        <rect key="frame" x="72.5" y="154" width="170" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="PvV-i2-IwH"/>
+                                            <constraint firstAttribute="height" constant="40" id="eqe-YY-18s"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <state key="normal" title="Ok">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="OkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q0V-wu-Msa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ncQ-ME-BWb" firstAttribute="top" secondItem="5eA-Eh-JTp" secondAttribute="top" constant="16" id="CuC-uu-e3T"/>
+                                    <constraint firstAttribute="bottom" secondItem="VCJ-cB-0GM" secondAttribute="bottom" constant="16" id="Dpg-6l-gDV"/>
+                                    <constraint firstItem="VCJ-cB-0GM" firstAttribute="top" secondItem="ncQ-ME-BWb" secondAttribute="bottom" constant="16" id="LkT-Ci-Pv7"/>
+                                    <constraint firstItem="VCJ-cB-0GM" firstAttribute="centerX" secondItem="5eA-Eh-JTp" secondAttribute="centerX" id="Pgh-XJ-unk"/>
+                                    <constraint firstAttribute="trailing" secondItem="ncQ-ME-BWb" secondAttribute="trailing" constant="16" id="f4R-n3-l6n"/>
+                                    <constraint firstAttribute="width" secondItem="5eA-Eh-JTp" secondAttribute="height" multiplier="1.5:1" id="s8W-Zl-EcD"/>
+                                    <constraint firstItem="ncQ-ME-BWb" firstAttribute="leading" secondItem="5eA-Eh-JTp" secondAttribute="leading" constant="16" id="vlO-Z1-YPB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5eA-Eh-JTp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="208" id="di5-j7-Hgm"/>
+                            <constraint firstItem="5eA-Eh-JTp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="joK-Q4-l3i"/>
+                            <constraint firstItem="5eA-Eh-JTp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whU-V5-NWo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="BigView" destination="5eA-Eh-JTp" id="KyV-tc-W0f"/>
+                        <outlet property="Messagelbl" destination="ncQ-ME-BWb" id="Ki3-P6-2iM"/>
+                        <outlet property="OkButton" destination="VCJ-cB-0GM" id="lul-nY-0Bu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
